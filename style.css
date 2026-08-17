@@ -1,0 +1,51 @@
+/* .container {
+  display: grid;
+  /* grid-template-columns: 50px 50px;
+  grid-template-rows: 50px 50px; 
+grid-template: 50px 50px / 50px 50px 50px; /*grid-template: rows / columns
+grid-auto-rows: 50px; /*Controls the size of implicit (added on rows) grid
+/* row-gap: 10px;
+  column-gap: 10px; 
+  gap: 10px;
+}
+.container div {
+  border: 2px solid blue;
+} */
+
+.container {
+  display: inline-grid; /*inline-grid to keep container from stretching*/
+  grid-template: repeat(5, 100px) / repeat(5, 100px);
+  grid-auto-rows: 100px;
+  background-color: aqua;
+}
+.container div {
+  text-align: center;
+  border: 2px solid black;
+}
+#living-room {
+  grid-column-start: 1; /*the number is the grid line number short-hand is grid-column start/end*/
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+#kitchen {
+  grid-column: 4/6;
+  grid-row: 3/6;
+}
+#bedroom {
+  grid-column: 2/4;
+  grid-row: 3/5;
+}
+#bathroom {
+  grid-column: 2/4;
+  grid-row: 5/6;
+}
+#closet {
+  /* grid-column: 1/2;
+  grid-row: 3/6; */
+
+  /*grid=area: shortens the above by combining both in one line as
+  grid-area: row-start/ row-end/ column-start /column-end*/
+
+  grid-area: 3/6/1/2;
+}
